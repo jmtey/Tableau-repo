@@ -4,8 +4,8 @@ I used SSMS to create some queries/tables that I loaded into Tableau to produce 
 - This dataset came from [ Our world in data ](https://ourworldindata.org/)
 - To see the Tableau report in question, please click [here](https://public.tableau.com/app/profile/jay5613/viz/MyPortifolioProject_Covid/Dashboard1?publish=yes)
 
-Source Code:
-
+**Source Code:**
+````SQL
 ---Generate the below tables to use in Tableau Public as couldn't connect direcctly in SQL with the free version
 ---Code used to generate "Table1" to be used in Tableau
 Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
@@ -32,5 +32,5 @@ Select Location, Population,date, MAX(total_cases) as HighestInfectionCount,  Ma
 From MyPortifolioProject..Covid_Deaths
 Group by Location, Population, date
 order by PercentPopulationInfected desc
-''''
-Credits: Alex Freberg youtube channel
+````
+*Credits: Alex Freberg youtube channel*
